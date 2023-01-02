@@ -1,0 +1,60 @@
+{
+  "name": "github-batch-bump-year",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Batch clone and update license year for GitHub repos.",
+  "author": "Travis Fischer <travis@transitivebullsh.it>",
+  "repository": "transitive-bullshit/github-batch-bump-year",
+  "license": "MIT",
+  "type": "module",
+  "source": "./src/index.ts",
+  "exports": {
+    "import": "./build/index.js",
+    "types": "./build/index.d.ts",
+    "default": "./build/index.js"
+  },
+  "files": [
+    "build"
+  ],
+  "engines": {
+    "node": ">=16"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "del build",
+    "prebuild": "run-s clean",
+    "predev": "run-s clean",
+    "pretest": "run-s build",
+    "prepare": "husky install",
+    "pre-commit": "lint-staged",
+    "test": "run-p test:*",
+    "test:prettier": "prettier '**/*.{js,jsx,ts,tsx}' --check"
+  },
+  "dependencies": {
+    "dotenv-safe": "^8.2.0",
+    "globby": "^13.1.3",
+    "octokit": "^2.0.10",
+    "p-map": "^5.5.0",
+    "rmfr": "^2.0.0",
+    "simple-git": "^3.15.1",
+    "tempy": "^3.0.0"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.0.0",
+    "@types/node": "^18.11.9",
+    "del-cli": "^5.0.0",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.0.3",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.8.0",
+    "tsup": "^6.5.0",
+    "tsx": "^3.12.1",
+    "typescript": "^4.9.3"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "prettier --write"
+    ]
+  }
+}
