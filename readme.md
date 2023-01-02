@@ -26,7 +26,7 @@ npx tsx src/bin.ts
 
 ## How it works
 
-The script fetches all of your public, non-fork repos and then performs a shallow clone to a temp directory for each one. License and readme file dates are processed with a simple regex, and if any changes are found, then a commit is made and pushed for that repo.
+The script fetches all of your public, non-fork repos and then performs a shallow clone to a temp directory for each one. License and readme file dates are processed with a simple regex, and if any changes are found, then a `chore` commit is made and pushed for that repo ([example commit](https://github.com/transitive-bullshit/chatgpt-api/commit/9ce1b0cf4f131751f7c0417aacef919e71749eda)).
 
 The script is idempotent, so you can run it as many times as you want, and if it doesn't find any files that should be updated, then no commits will be pushed.
 
