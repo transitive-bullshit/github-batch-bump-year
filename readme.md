@@ -1,6 +1,6 @@
 # GitHub Batch Bump Year <!-- omit in toc -->
 
-> TODO
+> Batch updates the current year in all license and readme files for your public GitHub repos.
 
 [![Build Status](https://github.com/transitive-bullshit/github-batch-bump-year/actions/workflows/test.yml/badge.svg)](https://github.com/transitive-bullshit/github-batch-bump-year/actions/workflows/test.yml) [![MIT License](https://img.shields.io/badge/license-MIT-blue)](https://github.com/transitive-bullshit/github-batch-bump-year/blob/main/license) [![Prettier Code Formatting](https://img.shields.io/badge/code_style-prettier-brightgreen.svg)](https://prettier.io)
 

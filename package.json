@@ -2,7 +2,7 @@
   "name": "github-batch-bump-year",
   "version": "0.0.1",
   "private": true,
-  "description": "Batch clone and update license year for GitHub repos.",
+  "description": "Batch updates the current year in all license and readme files for your public GitHub repos.",
   "author": "Travis Fischer <travis@transitivebullsh.it>",
   "repository": "transitive-bullshit/github-batch-bump-year",
   "license": "MIT",
