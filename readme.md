@@ -6,6 +6,7 @@
 
 - [Intro](#intro)
 - [Usage](#usage)
+- [How it works](#how-it-works)
 - [License](#license)
 
 ## Intro
@@ -23,7 +24,11 @@ pnpm install
 npx tsx src/bin.ts
 ```
 
-The script is idempotent, so if you run it again and it doesn't find any files that should be updated, then no commits will be pushed.
+## How it works
+
+The script fetches all of your public, non-fork repos and then performs a shallow clone to a temp directory for each one. License and readme file dates are processed with a simple regex, and if any changes are found, then a commit is made and pushed for that repo.
+
+The script is idempotent, so you can run it as many times as you want, and if it doesn't find any files that should be updated, then no commits will be pushed.
 
 ## License
 
