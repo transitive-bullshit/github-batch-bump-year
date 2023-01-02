@@ -20,7 +20,9 @@ _Requires Node.js 16 or later._
 _You'll need a `GITHUB_ACCESS_TOKEN` environment variable._
 
 ```bash
-pnpm install
+git clone git@github.com:transitive-bullshit/github-batch-bump-year.git
+cd github-batch-bump-year
+pnpm install # (or npm install or yarn install)
 npx tsx src/bin.ts
 ```
 
@@ -28,7 +30,7 @@ npx tsx src/bin.ts
 
 The script fetches all of your public, non-fork repos and then performs a shallow clone to a temp directory for each one. License and readme file dates are processed with a simple regex, and if any changes are found, then a `chore` commit is made and pushed for that repo ([example commit](https://github.com/transitive-bullshit/chatgpt-api/commit/9ce1b0cf4f131751f7c0417aacef919e71749eda)).
 
-The script is idempotent, so you can run it as many times as you want, and if it doesn't find any files that should be updated, then no commits will be pushed.
+The script is idempotent, so you can run it as many times as you want, and if it doesn't find any files that should be updated, then no commits will be made.
 
 ## License
 
